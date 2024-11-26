@@ -65,17 +65,17 @@ description: production
 multiTarget:
   targetIds: [run-qsprod, run-qsprod-tok]
 
-# ---
-# apiVersion: deploy.cloud.google.com/v1
-# kind: Target
-# metadata:
-#   name: run-qsprod-tok
-# description: Cloud Run production service
-# run:
-#   location: projects/PROJECT_ID/locations/asia-northeast1
-# executionConfigs:
-#   - usages:
-#       - RENDER
-#       - DEPLOY
-#       - VERIFY
-#     serviceAccount: deployer@PROJECT_ID.iam.gserviceaccount.com
+---
+apiVersion: deploy.cloud.google.com/v1
+kind: Target
+metadata:
+  name: run-qsprod-tok
+description: Cloud Run production service
+run:
+  location: projects/PROJECT_ID/locations/asia-northeast1
+executionConfigs:
+  - usages:
+      - RENDER
+      - DEPLOY
+      - VERIFY
+    serviceAccount: deployer@PROJECT_ID.iam.gserviceaccount.com
